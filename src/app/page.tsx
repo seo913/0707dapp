@@ -30,11 +30,14 @@ const Home: NextPage = () => {
         // console.log(signedToken); // 메타마스크 서명값
 
         // 앞에꺼가 응답, 뒤에꺼가 요청 요청은 백엔드에 바디 부분
-        const response = await axios.post('http://localhost:3000/api/user', {
-          account: accounts[0],
-          email, //email: email
-          signedToken,
-        });
+        const response = await axios.post(
+          `${process.env.NEXT_PUBLIC_URL}/api/user`,
+          {
+            account: accounts[0],
+            email, //email: email
+            signedToken,
+          }
+        );
 
         localStorage.setItem('signedToken', signedToken);
         // localStorage.getItem('signedToken');
