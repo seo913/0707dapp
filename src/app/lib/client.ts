@@ -4,7 +4,7 @@ import { MetaMaskSDK } from '@metamask/sdk';
 const MMSDK = new MetaMaskSDK({
   dappMetadata: {
     name: 'Project',
-    url: 'https://project.project',
+    url: 'https:/0707dapp-ozm9.vercel.app',
   },
 });
 const ethereum = MMSDK.getProvider();
